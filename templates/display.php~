@@ -1,0 +1,14 @@
+<h3>Images of books</h3>
+<img src="/media/images/book_183225.jpg" />
+
+{% for p in photos %}
+    
+    
+    <img src="/media/images/p.photo.name" />
+    
+     
+    
+    
+    {% endfor %}
+
+
