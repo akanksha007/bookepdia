@@ -1,0 +1,19 @@
+<h3>Images of books</h3>
+<img src="/media/images/book_183225.jpg" />
+<script>
+{% for p in photos %}
+    
+    var url = p;
+    var lastSegment = url.split('/').pop();
+    
+     
+     
+    
+    <img src="/media/images/lastSegment" />
+    
+</script>
+    
+    
+    {% endfor %}
+
+
