@@ -1,18 +1,11 @@
+<html>
 <h3>Images of books</h3>
-<img src="/media/images/book_183225.jpg" />
 
 {% for p in photos %}
-    <script>
-    var url = p;
-    var lastSegment = url.split('/').pop();
-    
-     
-     
-    
-    <img src="/media/images/"lastSegment /> 
-    
-    </script>
-    {% endfor %}
+    <img src="{{p.photo.url}}" />
+{% endfor %}
+</html>
+
 <html>
 <head>
     <title>{% if request.user.is_authenticated %}Logged In{% else %}Not Logged In{% endif %}</title>
@@ -34,4 +27,3 @@
 {% endif %}
 </body>
 </html>
-

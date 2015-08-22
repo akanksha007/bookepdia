@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 import os
 
 urlpatterns = patterns('',
-    # Examples:
+    
     url(r'^$', 'bookepdia.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^accounts/', include('allauth.urls')),
