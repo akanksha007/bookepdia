@@ -105,10 +105,13 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
-MEDIA_ROOT='/home/akanksha/bookepdia/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_ROOT='/home/akanksha/bookepdia/media/'
 MEDIA_URL = '/media/'
-TEMPLATE_DIRS = ('/home/akanksha/bookepdia/templates',
-    
+TEMPLATE_DIRS = (
+    BASE_DIR + '/templates/',
 )
+    
+
