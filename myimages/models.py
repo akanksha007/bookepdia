@@ -7,7 +7,9 @@ class Image(models.Model):
     photo = models.ImageField(upload_to='images')
     
         
-        
+class FormImage(models.Model):
+    title = models.CharField(max_length=255)
+    photo = models.ImageField(upload_to='img')       
    
     
     
