@@ -11,9 +11,7 @@ class Image(models.Model):
    
     
     
-class UploadForm(forms.ModelForm):
-    title = forms.CharField(max_length=255)
-    photo = forms.ImageField()
+
 
     
 
