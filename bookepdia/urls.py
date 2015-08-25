@@ -9,10 +9,12 @@ urlpatterns = patterns('',
     url(r'^$', 'bookepdia.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^upload_file/','bookepdia.views.upload_file', name='upload_file'),
+    #url(r'^image/', 'bookepdia.views.image', name='image'),
+    url(r'^upload/','bookepdia.views.upload_file', name='upload_file'),
     
     
-    
+    #url(r'^show/(.*)/','bookepdia.views.image', name='image'),
+    url(r'^show/', include('myimages.url')),
 
 
     url(r'^admin/', include(admin.site.urls)),

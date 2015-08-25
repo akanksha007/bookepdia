@@ -5,11 +5,10 @@ from django import forms
 class Image(models.Model):
     title = models.CharField(max_length=255)
     photo = models.ImageField(upload_to='images')
+    desc = models.TextField()
     
         
-class FormImage(models.Model):
-    title = models.CharField(max_length=255)
-    photo = models.ImageField(upload_to='img')       
+     
    
     
     

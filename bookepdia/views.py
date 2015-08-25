@@ -5,7 +5,7 @@ from django.template import Context, loader
 from myimages.models import Image
 from django.http import HttpResponseRedirect
 #from django.shortcuts import render_to_response
-
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from .forms import UploadForm
 
@@ -17,6 +17,9 @@ def home(request):
 
     #return HttpResponse("good going")
     
+def image(request,heading):
+    photos = Image.objects.get(title=heading)
+    return render_to_response('image.html', {'photos' : photos})
 
 def upload_file(request):
     if request.method == 'POST':

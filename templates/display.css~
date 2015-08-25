@@ -1,15 +1,54 @@
-
 <html>
-
 <h3>Images of books</h3>
 
 {% for p in photos %}
+    <a href="{{p.photo.url}}"><img src="{{p.photo.url}}" width=300px height=200px alt="polaroid" title="{{p.title.url}}" /></a>
     
-    <a href=show/{{p.title}}><img src="{{p.photo.url}}" width=300px height=200px  title="{{p.title}}" /></a>
+    <div class="imgWrap">
+    <img src="{{p.photo.url}}" alt="polaroid" />
+    <p class="imgDescription">dfdsfdsf</p>
+    
+    </div>
     
     
-    
+  
 {% endfor %}
+
+
+
+body {
+  font: 14px/1.4 arial;
+}
+
+.imgWrap {
+  position: relative;
+  height: 200px;
+  width: 257px;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+
+
+  visibility: hidden;
+  opacity: 0;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
 </html>
 
 <html>
