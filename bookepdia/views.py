@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.shortcuts import render
 from .forms import UploadForm
+from django.core.context_processors import csrf
 
 from django.core.urlresolvers import reverse
 
@@ -31,3 +32,7 @@ def upload_file(request):
     else:
         form = UploadForm()
     return render(request, 'upload.html', {'form': form},)
+    
+    
+    
+

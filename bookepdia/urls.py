@@ -13,7 +13,6 @@ urlpatterns = patterns('',
     url(r'^upload/','bookepdia.views.upload_file', name='upload_file'),
     
     
-    #url(r'^show/(.*)/','bookepdia.views.image', name='image'),
     url(r'^show/', include('myimages.url')),
 
 
