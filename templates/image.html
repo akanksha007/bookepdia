@@ -1,5 +1,13 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}" />
 <html>
+<body bgcolor="#6d695c">
+<h2 align="middle">{{photos.title}}</h2>
 
-<img src="{{photos.photo.url}}" title="{{photos.title}}" />
-{{photos.desc}}
+
+<CENTER><img src="{{photos.photo.url}}" height=600px width=600px/></CENTER>
+<h4>{{photos.desc}}</h4>
+
+<a href="https://akanksha007.github.io/"><h5 align="middle">developed by</h5></a>
+</body>
 </html>

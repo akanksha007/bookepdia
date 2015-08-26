@@ -6,8 +6,4 @@ import os
 
 urlpatterns = patterns('',
     url(r'^(?P<heading>[\w]+)/$','bookepdia.views.image', name='image'),
-    
-    
-    
-    
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
