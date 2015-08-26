@@ -6,6 +6,7 @@ Clicking on each image opens a webpage with brief description of the content rel
 Assuming you have django installed, follow these steps to run the app.
 
 git clone git://github.com/akanksha/bookepdia.git
+
 cd bookepdia
 
 Now we need to create the database tables . On Django 1.6 and below, run the following command.
